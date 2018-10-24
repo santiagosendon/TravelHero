@@ -3,10 +3,9 @@ module CityApi
   require 'json'
 
   def google_api_fetch
-      @city_data =  JSON.parse(RestClient.get(https://maps.googleapis.com/maps/api/geocode/json?address= AIzaSyA3sRU8kFZgR2L7JX08eWVbA4b8tBxt3E8))
+      @city_data =  JSON.parse(RestClient.get(INSERT URL + KEY))
   end
 
-  # https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
 
   def gather_api_city_data
     google_api_fetch
@@ -18,4 +17,4 @@ module CityApi
     end
 
 
-# end
+end
