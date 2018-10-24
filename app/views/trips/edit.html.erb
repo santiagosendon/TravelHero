@@ -1,0 +1,27 @@
+<%= render 'layouts/navbar'%>
+<div class="editlist">
+<h2>Edit Trips</h2>
+
+<%= form_for @user, url: user_trips_path, method: :post do |f|%>
+<p><%= f.submit "Update Trips"%></p>
+<table>
+  <tr>
+    <th>City</th>
+    <th>Status</th>
+  </tr>
+
+  <%  @cities.each do |city| %>
+  <tr>
+      <td><%= city.name %></td>
+      <td>
+        <input type="radio" id="<%= city.id %>" name="[status]<%= city.id %>" value="Visited" <%= checked="checked" if !@trips.find_by(city_id: city.id).nil? && @trips.find_by(city_id: city.id).status == "Visited"  %>/>
+        Visited
+        <input type="radio" id="<%= city.id %>" name="[status]<%= city.id %>" value="Wished" <%= checked="checked" if !@trips.find_by(city_id: city.id).nil? && @trips.find_by(city_id: city.id).status == "Wished"  %> />
+        Wished
+      </td>
+    </tr>
+
+  <% end %>
+</table>
+<% end %>
+</div>

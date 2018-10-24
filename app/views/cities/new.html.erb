@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <h1>Add a new city</h1>
+      <%= form_for(@city) do |f| %>
+        <%= f.label :name %> <br>
+        <%= f.text_field :name %> <br>
+
+        <%= f.label :country %> <br>
+        <%= f.text_field :country %> <br>
+
+        <%= f.label :description %> <br>
+        <%= f.text_field :description %> <br>
+
+        <%= f.submit %>
+      <% end %>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body class="login">
+    <%= form_for @user, url: login_path(@user), method: :post do |f|%>
+      <div class="login-page">
+        <h1 class="header">
+          <img src="images/TravelShare_Logo.jpg" alt="">
+        </h1>
+        <div class="container">
+          <br>
+          <%= f.text_field :username, placeholder: "Username"%> </br>
+
+          <%= f.password_field :password, placeholder: "Password"%> </br> <br>
+
+          <%= f.submit "Login"%>
+          <button>
+            <%= link_to "Sign Up", new_user_path %>
+          </button>
+        </div>
+      </div>
+    <% end %>
+  </body>
+</html>

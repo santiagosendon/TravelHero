@@ -1,0 +1,304 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+ @import url('https://fonts.googleapis.com/css?family=EBGaramond');
+ @import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700');
+
+.main {
+  background: url("home-background.jpeg") no-repeat center center fixed;
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.profile {
+  background: url("profile.jpeg") no-repeat center center fixed;
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+.signup {
+  background: url("sign-up-bg.jpeg") no-repeat center center fixed;
+  font-family:'Quattrocento', Arial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login {
+  background: url("login.jpg") no-repeat center center fixed;
+  font-family:'Quattrocento', Arial;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.cityindexheader{
+  text-align: center;
+}
+
+.list-container {
+  width: 100%;
+}
+
+.list-container-list {
+  float:left;
+  text-align: center;
+  width: 49%;
+  overflow: scroll;
+}
+
+.container-1 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin: 15% auto;
+  width: 20%;
+  padding-bottom: 50px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.button {
+  border-top: 1px solid #96d1f8;
+  background: #65a9d7;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+  background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+  background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+  background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+  background: -o-linear-gradient(top, #3e779d, #65a9d7);
+  padding: 11px 20px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+  box-shadow: rgba(0,0,0,1) 0 1px 0;
+  text-shadow: rgba(0,0,0,.4) 0 1px 0;
+  color: black;
+  font-size: 14px;
+  font-family:'Quattrocento', Arial;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.button:hover {
+  border-top-color: #28597a;
+  background: #28597a;
+  color: #ccc;
+}
+
+.button:active {
+  border-top-color: #1b435e;
+  background: #1b435e;
+}
+
+.login-page {
+  margin-top: 20px;
+}
+
+p {
+  font-size: 120%;
+  font-family:'Quattrocento', Arial;
+  font-weight: bold;
+  color: black;
+}
+
+.sign-up-field {
+  margin: 0;
+  margin-top: 15px;
+}
+
+.new_user {
+  text-align:center;
+  position:relative;
+}
+
+body {
+ background-color: #FEFEF2
+}
+
+h2{
+  font-size: 200%;
+  font-family: 'Quattrocento', Arial;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 10px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+      display: block;
+      float: none;
+  }
+}
+
+/* Bordered form */
+.header {
+  padding: 20px 0 0 0;
+  color: black;
+  text-align: center;
+  font-size: 300%;
+  font-family: 'Quattrocento', Arial;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email], textarea {
+  width: 30%;
+  padding: 10px 20px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: future, Gadget, sans-serif;
+}
+
+.user-profile {
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  border-radius: 10px;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.edit-profile {
+  text-align: center;
+}
+
+.review {
+  text-align: center;
+}
+
+.review-form {
+  text-align: center;
+}
+
+
+/* CSS for City Show Page*/
+.city-info {
+  margin: 0 20%;
+}
+
+.city-info>h3{
+  font-family: 'Quattrocento', Arial;
+   font-size: 1.5em;
+}
+
+.city-header>h2 {
+  font-family: 'Quattrocento', Arial;
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Controls size of google map */
+#map {
+  height: 400px;
+  width: 75%;
+   margin: 0 auto;
+}
+
+/* CSS for Image Slider */
+
+#slider {
+  height: 100%;
+  width: 400px;
+  overflow: hidden;
+  position: relative;
+  left: 35%;
+}
+
+#slider .slides {
+  display: block;
+  width: 10000px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  height: 250px;
+  width: 400px;
+}
+
+/* NAv bar */
+.example3 .navbar-brand {
+     height: 0px;
+   }
+   .navbar .brand > img {
+     max-height: 40px;
+   }
+
+   .example3 .nav >li >a {
+     padding-top: 5px;
+      padding-bottom: 20px;
+      padding-right: 50px;
+      padding-left: 10px;
+   }
+   .example3 .navbar-toggle {
+     padding: 30px;
+     padding-bottom: 0px;
+     margin: 25px 15px 25px 0;
+   }
+
+
+
+
+/* city index */
+.backimg{
+  background: url("home-background.jpeg") no-repeat center center fixed;
+  font-family: fu tura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.citylist{
+  width: 50%;
+
+  background-color: white;
+
+}
+
+.citylisttable, tr, td{
+
+  margin: 0 auto;
+
+}
+
+/* edit list */
+.editlist{
+  margin-left: 33%;
+}

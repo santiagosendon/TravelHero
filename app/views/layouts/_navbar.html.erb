@@ -1,0 +1,27 @@
+<div class="example3">
+   <nav class="navbar navbar-inverse navbar-static-top">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
+       <div id="navbar3" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav navbar-right">
+           <li class="active"><a href="<%=user_trips_path(@user)%>">My Travels</a></li>
+           <li><a href="<%= cities_path%>">Destinations</a></li>
+           <li><a href="<%=user_path(@user) %>">My Profile</a></li>
+          
+           <li> <%= link_to "Log out", logout_path, method: "delete", options: {class: "glyphicon glyphicon-log-out"}%></li>
+         </ul>
+           </li>
+         </ul>
+       </div>
+       <!--/.nav-collapse -->
+     </div>
+     <!--/.container-fluid -->
+   </nav>
+ </div>

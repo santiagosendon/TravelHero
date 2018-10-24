@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+  <%= render 'layouts/navbar'%>
+    <div class="city-header">
+      <h2><%= @city.name %>, <%= @city.country %></h2>
+    </div>
+
+    <div class="image-container">
+      <div id="slider">
+        <ul class="slides">
+          <% @photos.each do |photo| %>
+            <li class="slide"><img src="<%= photo %>" alt=""></li>
+          <% end %>
+          <li class="slide"><img src="<%= @photos[0] %>" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+  <%= link_to "Add Review", new_review_path %>
+  <div>
+    <% @reviews.each do |trip| %>
+      <h2><%= trip.user.username %></h2>
+      <h3><%= trip.review.rating %> - <%= trip.review.description %></h3>
+    <% end %>
+  </div>
+
+    <div class="city-info">
+      <h3><%= @city.description %></h3>
+    </div>
+
+    <a href="http://maps.google.com/?q=<%=@city.latitude%>,<%=@city.longitude%>">Google Maps</a><br />
+    <%= render partial: 'city_map', locals: {city: @city} %>
+
+    <div class="list-container">
+      <div class="list-container-list">
+        <h3>Explored</h3>
+        <% @trips.each do |trip|%>
+          <% if trip.status == "Visited"%>
+            <p><%= link_to trip.user.username, user_trips_path(trip.user) %> </p>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="list-container-list">
+        <h3>Bucket List</h3>
+        <% @trips.each do |trip|%>
+          <% if trip.status == "Wished"%>
+            <p><%= link_to trip.user.username, user_trips_path(trip.user) %> </p>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+  </body>
+  <script>
+    //configuration
+    $(function() {
+      var width = 400;
+      var animationSpeed = 1000;
+      var pause = 3000;
+      var currentSlide = 1;
+
+    // cache DOM
+      var $slider = $('#slider');
+      var $slideContainer = $slider.find('.slides');
+      var $slides = $slideContainer.find('.slide');
+      var interval;
+
+      function startSlider() {
+        interval = setInterval(function() {
+          $slideContainer.animate({'margin-left': '-='+width}, animationSpeed, function() {
+            if (++currentSlide === $slides.length) {
+              currentSlide = 1;
+              $slideContainer.css('margin-left', 0);
+            }
+          });
+        }, pause);
+      }
+
+      function pauseSlider() {
+        clearInterval(interval);
+      }
+
+      $slideContainer.on('mouseenter', pauseSlider).on('mouseleave', startSlider);
+      startSlider();
+
+    });
+  </script>
+
+</html>

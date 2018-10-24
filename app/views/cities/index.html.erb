@@ -1,0 +1,19 @@
+<%= render "layouts/navbar" %>
+<div class ="backimg">
+<div class ="citylist">
+  <%= link_to "Add City", new_city_path %>
+<table class= "citylisttable" >
+  <tr>
+    <th>City</th>
+    <th>Country</th>
+  </tr>
+
+  <% @cities.each do |city| %>
+  <tr>
+    <td><%= link_to city.name, city_path(city)%></td>
+    <td><%= city.country%></td>
+  </tr>
+  <% end %>
+</table>
+</div>
+</div>

@@ -1,0 +1,20 @@
+<%= render 'layouts/navbar'%>
+<h1 class="cityindexheader"><%= @user.first_name.capitalize %> <%= @user.last_name.capitalize %>'s Travel Adventures</h1>
+<div class="list-container">
+  <div class="list-container-list">
+    <h3>Explored</h3>
+    <% @user.trips.each do |trip|%>
+      <% if trip.status == "Visited"%>
+        <p><%= link_to trip.city.name, city_path(trip.city) %> </p>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="list-container-list">
+    <h3>Bucket List</h3>
+    <% @user.trips.each do |trip|%>
+      <% if trip.status == "Wished"%>
+        <p><%= link_to trip.city.name, city_path(trip.city) %> </p>
+      <% end %>
+    <% end %>
+  </div>
+</div>

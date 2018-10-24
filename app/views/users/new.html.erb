@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body class="signup">
+    <h1 class="header">Create an Account</h1> <br>
+    <% if @user.errors.any? %>
+      <div id="container">
+        <h3>
+          <b>
+            Uh-oh! <%= pluralize(@user.errors.count, "error") %> prohibited you from creating an account:
+          </b>
+        </h3>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div> <!-- container -->
+    <% end %>
+
+    <%= form_for(@user) do |f|%>
+      <form>
+        <div class="container">
+        <p class="sign-up-field"><%=f.label "Username"%></p>
+        <%= f.text_field :username%>
+
+        <p class="sign-up-field"><%=f.label "First Name"%></p>
+        <%= f.text_field :first_name%>
+
+        <p class="sign-up-field"><%=f.label "Last Name"%></p>
+        <%= f.text_field :last_name%>
+
+        <p class="sign-up-field"><%=f.label "Email" %></p>
+        <%= f.email_field :email%>
+
+        <p class="sign-up-field"><%=f.label "About Me:" %></p>
+        <%= f.text_area :bio%>
+
+        <p class="sign-up-field"><%=f.label "Password" %></p>
+        <%= f.password_field :password%>
+
+        <p class="sign-up-field"><%=f.label "Password Confirmation" %></p>
+        <%= f.password_field :password_confirmation%>
+<br>
+<br>
+        <%= f.submit "Start your travel journey!"%>
+        </div>
+
+      </form>
+    <%end %>
+
+  </body>
+</html>
