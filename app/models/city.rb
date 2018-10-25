@@ -1,10 +1,12 @@
 class City < ApplicationRecord
+  require 'rest-client'
+  require 'json'
   has_many :trips
   has_many :users, through: :trips
   has_many :reviews, through: :trips
   validates :name, uniqueness: true, presence: true
 
-  KEY = "AIzaSyDHo4oNRgoF_vXpEaq7R_6M1RCyyPiQaqo"
+  KEY = "AIzaSyDUva4GdFJ5TsIbm5NgzNksacOvqDwEpW0"
 
   # method to send request to fetch geocode location of a city
   def google_api_fetch
