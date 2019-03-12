@@ -1,12 +1,12 @@
-Starting Up a React App
+Starting Up a Rails App
 This lesson has all the necessary parts of a fully working React app. To check the app out, fork and clone this lesson onto your computer, navigate into directory, and run:
 
-npm install
-This will get and install all the required dependencies for React.
+bundle install
+This will get and install all the required dependencies for Ruby on Rails.
 
 Next, we need to start up a server for the app to run on:
 
-npm start
+rails s Command
 This will host the app and open a browser window to display it. If the browser doesn't open, but the server started correctly, you can use the links that appear in the terminal to access the app. They should look something like the following:
 
 Local:            http://localhost:3000/
